@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | VirtuEase</title>
+    <meta name="description" content="Stay ahead with the latest insights on SEO, web design, and digital marketing from the VirtuEase blog.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .page-hero {
+            min-height: 50vh;
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+        .page-hero .hero-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .page-hero .hero-title {
+            margin-bottom: 16px;
+        }
+        .page-hero .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+        }
+
+        .blog-section {
+            padding: 60px 0 100px;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(130,36,227,0.3);
+            box-shadow: 0 20px 60px rgba(130,36,227,0.15);
+        }
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        .blog-card:nth-child(1) .blog-card-image {
+            background: linear-gradient(135deg, #390D61 0%, #1a0030 50%, #8224e3 100%);
+        }
+        .blog-card:nth-child(2) .blog-card-image {
+            background: linear-gradient(135deg, #1a0030 0%, #390D61 50%, #5a1a99 100%);
+        }
+        .blog-card:nth-child(3) .blog-card-image {
+            background: linear-gradient(135deg, #0a001a 0%, #390D61 50%, #1a0030 100%);
+        }
+        .blog-card-image i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: rgba(255,255,255,0.08);
+        }
+        .blog-category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 14px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .blog-card-body {
+            padding: 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .blog-card-body h3 a {
+            color: var(--text-white);
+            transition: var(--transition);
+        }
+        .blog-card-body h3 a:hover {
+            color: var(--primary);
+        }
+        .blog-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .blog-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .blog-date i {
+            color: var(--primary);
+            font-size: 0.75rem;
+        }
+        .blog-read-more {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        .blog-read-more:hover {
+            color: var(--primary-hover);
+            gap: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .page-hero {
+                padding-top: 100px;
+                padding-bottom: 40px;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+            .blog-card-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="VirtuEase Logo">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="services.html#website-development">Website Development</a></li>
+                            <li><a href="services.html#seo-gbp">SEO & Google Business Profile Optimization</a></li>
+                            <li><a href="services.html#article-writing">Article and Blog Writing</a></li>
+                            <li><a href="services.html#virtual-assistant">Virtual Assistant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="contact.html" class="btn btn-primary header-btn">Contact</a>
+
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero page-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Blog</h1>
+                    <p class="hero-subtitle">Stay ahead with the latest insights from the VirtuEase Blog.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-grid">
+
+                    <article class="blog-card fade-in">
+                        <div class="blog-card-image">
+                            <i class="fas fa-search"></i>
+                            <span class="blog-category">SEO</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3><a href="#">Why Your Business Needs a Google Business Profile in 2025</a></h3>
+                            <p>Discover how optimizing your Google Business Profile can drive more local customers to your door...</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 15, 2025</span>
+                                <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card fade-in">
+                        <div class="blog-card-image">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="blog-category">SEO</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3><a href="#">The Ultimate Guide to Local SEO for Small Businesses</a></h3>
+                            <p>Learn the essential strategies to rank higher in local search results and attract more customers...</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 10, 2025</span>
+                                <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card fade-in">
+                        <div class="blog-card-image">
+                            <i class="fas fa-palette"></i>
+                            <span class="blog-category">Web Design</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <h3><a href="#">5 Web Design Trends That Will Dominate in 2025</a></h3>
+                            <p>Stay ahead of the curve with these innovative web design trends that are shaping the digital landscape...</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 5, 2025</span>
+                                <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="VirtuEase Logo" class="footer-logo">
+                    <h3 class="footer-title">VirtuEase</h3>
+                    <p class="footer-tagline">Your Creative Growth Partner</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Work Inquiries</h4>
+                    <p>Interested in working with us?</p>
+                    <a href="mailto:info@virtueasepro.com" class="footer-email">info@virtueasepro.com</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VirtuEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | VirtuEase</title>
+    <meta name="description" content="Frequently asked questions about VirtuEase digital services, website development, SEO, and Google Business Profile optimization.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .page-hero {
+            min-height: 50vh;
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+        .page-hero .hero-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .page-hero .hero-title {
+            margin-bottom: 16px;
+        }
+        .page-hero .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+        }
+
+        .faq-section {
+            padding: 60px 0 100px;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .faq-item {
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--border-radius);
+            background: linear-gradient(180deg, #390D61 0%, #000000 100%);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: rgba(130,36,227,0.3);
+        }
+        .faq-item.active {
+            border-color: rgba(130,36,227,0.4);
+            box-shadow: 0 8px 30px rgba(130,36,227,0.1);
+        }
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 28px;
+            background: transparent;
+            color: var(--text-white);
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            text-align: left;
+            gap: 16px;
+        }
+        .faq-question:hover {
+            color: var(--text-white);
+        }
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(130,36,227,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .faq-icon i {
+            font-size: 0.85rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            background: var(--primary);
+        }
+        .faq-item.active .faq-icon i {
+            color: #fff;
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer-inner {
+            padding: 0 28px 24px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero {
+                padding-top: 100px;
+                padding-bottom: 40px;
+            }
+            .faq-question {
+                padding: 20px 20px;
+                font-size: 0.98rem;
+            }
+            .faq-answer-inner {
+                padding: 0 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="VirtuEase Logo">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link active">FAQ</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="services.html#website-development">Website Development</a></li>
+                            <li><a href="services.html#seo-gbp">SEO & Google Business Profile Optimization</a></li>
+                            <li><a href="services.html#article-writing">Article and Blog Writing</a></li>
+                            <li><a href="services.html#virtual-assistant">Virtual Assistant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="contact.html" class="btn btn-primary header-btn">Contact</a>
+
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero page-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Frequently Asked Questions</h1>
+                    <p class="hero-subtitle">Got questions? We've got answers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-list">
+
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            <span>What services does VirtuEase offer?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                We offer a full suite of digital services including website development, SEO optimization, Google Business Profile management, article and blog writing, and virtual assistant support.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does it take to build a website?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Typically, a standard website takes 2-4 weeks from start to finish. Complex projects with custom features may take longer. We'll provide a timeline during our initial consultation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you work with businesses outside Nigeria?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                While we specialize in helping local Nigerian businesses grow online, we work with clients worldwide. Our digital services are location-independent.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is Google Business Profile optimization?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Google Business Profile (GBP) optimization is the process of improving your business listing on Google to appear more prominently in local search results and Google Maps. We optimize your profile to attract more customers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I get started?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Simply reach out to us via our contact page or send us an email. We'll schedule a free consultation to understand your needs and create a tailored strategy.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What makes VirtuEase different from other agencies?</span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                We combine creativity with technical expertise, offer personalized service as your growth partner, and focus on delivering measurable results rather than vanity metrics.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="VirtuEase Logo" class="footer-logo">
+                    <h3 class="footer-title">VirtuEase</h3>
+                    <p class="footer-tagline">Your Creative Growth Partner</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Work Inquiries</h4>
+                    <p>Interested in working with us?</p>
+                    <a href="mailto:info@virtueasepro.com" class="footer-email">info@virtueasepro.com</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VirtuEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
