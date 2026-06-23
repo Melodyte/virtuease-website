@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "virtuease",
+  "builds": [],
+  "outputDirectory": ".",
+  "framework": null,
+  "routes": [
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/contact-us", "dest": "/contact.html" },
+    { "src": "/portfolio", "dest": "/portfolio.html" },
+    { "src": "/faq", "dest": "/faq.html" },
+    { "src": "/blog", "dest": "/blog.html" },
+    { "src": "/website-development", "dest": "/website-development.html" },
+    { "src": "/seo-google-business-profile-optimization", "dest": "/seo-google-business-profile-optimization.html" },
+    { "src": "/article-and-blog-writing", "dest": "/article-and-blog-writing.html" },
+    { "src": "/virtual-assistant", "dest": "/virtual-assistant.html" }
+  ]
+}
