@@ -13,162 +13,60 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        .page-hero {
-            min-height: 50vh;
-            padding-top: 120px;
-            padding-bottom: 60px;
-        }
-        .page-hero .hero-content {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .page-hero .hero-title {
-            margin-bottom: 16px;
-        }
-        .page-hero .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-gray);
-        }
-
-        .blog-section {
-            padding: 60px 0 100px;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        .blog-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(130,36,227,0.3);
-            box-shadow: 0 20px 60px rgba(130,36,227,0.15);
-        }
-        .blog-card-image {
-            width: 100%;
-            height: 200px;
-            position: relative;
-            overflow: hidden;
-        }
-        .blog-card:nth-child(1) .blog-card-image {
-            background: linear-gradient(135deg, #390D61 0%, #1a0030 50%, #8224e3 100%);
-        }
-        .blog-card:nth-child(2) .blog-card-image {
-            background: linear-gradient(135deg, #1a0030 0%, #390D61 50%, #5a1a99 100%);
-        }
-        .blog-card:nth-child(3) .blog-card-image {
-            background: linear-gradient(135deg, #0a001a 0%, #390D61 50%, #1a0030 100%);
-        }
-        .blog-card-image i {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2.5rem;
-            color: rgba(255,255,255,0.08);
-        }
-        .blog-category {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            padding: 6px 14px;
-            background: var(--primary);
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .blog-card-body {
-            padding: 28px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-card-body h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-        .blog-card-body h3 a {
-            color: var(--text-white);
-            transition: var(--transition);
-        }
-        .blog-card-body h3 a:hover {
-            color: var(--primary);
-        }
-        .blog-card-body p {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            flex: 1;
-        }
-        .blog-card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .blog-date {
-            font-size: 0.8rem;
-            color: var(--text-gray);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .blog-date i {
-            color: var(--primary);
-            font-size: 0.75rem;
-        }
-        .blog-read-more {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-        }
-        .blog-read-more:hover {
-            color: var(--primary-hover);
-            gap: 10px;
-        }
-
-        @media (max-width: 1024px) {
-            .blog-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 768px) {
-            .page-hero {
-                padding-top: 100px;
-                padding-bottom: 40px;
-            }
-            .blog-grid {
-                grid-template-columns: 1fr;
-                max-width: 480px;
-                margin: 0 auto;
-            }
-            .blog-card-image {
-                height: 180px;
-            }
-        }
-    </style>
+    <meta property="og:title" content="Blog | VirtuEase">
+    <meta property="og:description" content="Stay ahead with the latest insights on SEO, web design, and digital marketing from the VirtuEase blog.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://virtueasepro.com/blog/">
+    <meta property="og:image" content="assets/images/logo.png">
 </head>
 <body>
+
+    <!-- Elements bar - Left side (scroll to top) -->
+    <ul class="elements-bar left">
+        <li>
+            <a href="#" class="scroll-top -undash -unlink -small-t vc_hidden-md vc_hidden-sm vc_hidden-xs">
+                <div class="scroll-top-bar">
+                    <div class="scroll-track"></div>
+                </div>
+                <div class="scroll-top-holder titles-typo">
+                    Scroll to top
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Elements bar - Right side (social) -->
+    <ul class="elements-bar right">
+        <li>
+            <div class="social-bar">
+                <ul class="social-bar-holder titles-typo -small-t -unlist vc_hidden-md">
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Custom cursor elements -->
+    <div class="circle-cursor circle-cursor-outer"></div>
+    <div class="circle-cursor circle-cursor-inner">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.06055 0H20.0605V18H17.0605V5.12155L2.12132 20.0608L0 17.9395L14.9395 3H2.06055V0Z"/>
+        </svg>
+    </div>
 
     <header class="header">
         <div class="container">
@@ -205,8 +103,7 @@
     </header>
 
     <main>
-
-        <section class="hero page-hero">
+        <section class="hero blog-hero">
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Blog</h1>
@@ -224,12 +121,12 @@
                             <i class="fas fa-search"></i>
                             <span class="blog-category">SEO</span>
                         </div>
-                        <div class="blog-card-body">
-                            <h3><a href="#">Why Your Business Needs a Google Business Profile in 2025</a></h3>
-                            <p>Discover how optimizing your Google Business Profile can drive more local customers to your door...</p>
-                            <div class="blog-card-footer">
-                                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 15, 2025</span>
-                                <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title"><a href="#">Why Your Business Needs a Google Business Profile in 2025</a></h3>
+                            <p class="blog-card-excerpt">Discover how optimizing your Google Business Profile can drive more local customers to your door...</p>
+                            <div class="blog-card-meta">
+                                <span><i class="far fa-calendar-alt"></i> Jan 15, 2025</span>
+                                <a href="#">Read More →</a>
                             </div>
                         </div>
                     </article>
@@ -239,12 +136,12 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span class="blog-category">SEO</span>
                         </div>
-                        <div class="blog-card-body">
-                            <h3><a href="#">The Ultimate Guide to Local SEO for Small Businesses</a></h3>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title"><a href="#">The Ultimate Guide to Local SEO for Small Businesses</a></h3>
                             <p>Learn the essential strategies to rank higher in local search results and attract more customers...</p>
-                            <div class="blog-card-footer">
-                                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 10, 2025</span>
-                                <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="blog-card-meta">
+                                <span><i class="far fa-calendar-alt"></i> Jan 10, 2025</span>
+                                <a href="#">Read More →</a>
                             </div>
                         </div>
                     </article>
@@ -254,12 +151,12 @@
                             <i class="fas fa-palette"></i>
                             <span class="blog-category">Web Design</span>
                         </div>
-                        <div class="blog-card-body">
-                            <h3><a href="#">5 Web Design Trends That Will Dominate in 2025</a></h3>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title"><a href="#">5 Web Design Trends That Will Dominate in 2025</a></h3>
                             <p>Stay ahead of the curve with these innovative web design trends that are shaping the digital landscape...</p>
-                            <div class="blog-card-footer">
-                                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 5, 2025</span>
-                                <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="blog-card-meta">
+                                <span><i class="far fa-calendar-alt"></i> Jan 5, 2025</span>
+                                <a href="#">Read More →</a>
                             </div>
                         </div>
                     </article>

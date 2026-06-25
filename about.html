@@ -16,201 +16,57 @@
     <meta property="og:title" content="About VirtuEase| Your Partners in Local Business Growth">
     <meta property="og:description" content="Learn how VirtuEase's creative growth approach helps businesses succeed. We are your dedicated partner for data-driven results in SEO and web design.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://virtueasepro.com/about.html">
+    <meta property="og:url" content="https://virtueasepro.com/about/">
     <meta property="og:image" content="assets/images/logo.png">
-
-    <style>
-        .about-hero {
-            position: relative;
-            min-height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(180deg, #000000 0%, #0a001a 40%, #120020 70%, #000000 100%);
-            overflow: hidden;
-            padding-top: 80px;
-            padding-bottom: 60px;
-        }
-
-        .about-hero::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(130, 36, 227, 0.12) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .about-hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            padding: 0 var(--container-padding);
-        }
-
-        .about-hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-            color: var(--text-white);
-        }
-
-        .about-hero-title span {
-            color: var(--primary);
-        }
-
-        .about-hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-gray);
-            margin-bottom: 35px;
-            line-height: 1.8;
-        }
-
-        .about-content {
-            padding: 80px 0;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 25% 50% 25%;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-left h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-white);
-            margin-bottom: 15px;
-        }
-
-        .about-left p {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .about-values-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .about-values-list li {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            line-height: 1.6;
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .about-values-list li::before {
-            content: '•';
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .about-values-list li strong {
-            color: var(--text-white);
-            font-weight: 600;
-        }
-
-        .about-center {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .about-center-image {
-            width: 100%;
-            max-width: 400px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-
-        .about-center-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .about-right-item {
-            margin-bottom: 40px;
-        }
-
-        .about-right-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .about-strategy-label {
-            font-size: 0.85rem;
-            color: var(--primary);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .about-divider {
-            width: 50px;
-            height: 2px;
-            background: var(--primary);
-            margin-bottom: 12px;
-        }
-
-        .about-right-item h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--text-white);
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        .about-right-item p {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        .about-spacer {
-            height: 30px;
-        }
-
-        @media (max-width: 1024px) {
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .about-center {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-            }
-            .about-hero {
-                min-height: 40vh;
-                padding-top: 68px;
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Elements bar - Left side (scroll to top) -->
+    <ul class="elements-bar left">
+        <li>
+            <a href="#" class="scroll-top -undash -unlink -small-t vc_hidden-md vc_hidden-sm vc_hidden-xs">
+                <div class="scroll-top-bar">
+                    <div class="scroll-track"></div>
+                </div>
+                <div class="scroll-top-holder titles-typo">
+                    Scroll to top
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Elements bar - Right side (social) -->
+    <ul class="elements-bar right">
+        <li>
+            <div class="social-bar">
+                <ul class="social-bar-holder titles-typo -small-t -unlist vc_hidden-md">
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Custom cursor elements -->
+    <div class="circle-cursor circle-cursor-outer"></div>
+    <div class="circle-cursor circle-cursor-inner">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.06055 0H20.0605V18H17.0605V5.12155L2.12132 20.0608L0 17.9395L14.9395 3H2.06055V0Z"/>
+        </svg>
+    </div>
 
     <header class="header">
         <div class="container">
@@ -247,7 +103,6 @@
     </header>
 
     <main>
-
         <section class="about-hero">
             <div class="container">
                 <div class="about-hero-content">
@@ -258,7 +113,7 @@
             </div>
         </section>
 
-        <section class="about-content">
+        <section class="about-section">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-left">

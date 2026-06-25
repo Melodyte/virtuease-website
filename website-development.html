@@ -16,10 +16,57 @@
     <meta property="og:title" content="Website Development | VirtuEase">
     <meta property="og:description" content="Custom-built, mobile-friendly websites that showcase your brand and bring results.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://virtueasepro.com/website-development.html">
+    <meta property="og:url" content="https://virtueasepro.com/website-development/">
     <meta property="og:image" content="assets/images/logo.png">
 </head>
 <body>
+
+    <!-- Elements bar - Left side (scroll to top) -->
+    <ul class="elements-bar left">
+        <li>
+            <a href="#" class="scroll-top -undash -unlink -small-t vc_hidden-md vc_hidden-sm vc_hidden-xs">
+                <div class="scroll-top-bar">
+                    <div class="scroll-track"></div>
+                </div>
+                <div class="scroll-top-holder titles-typo">
+                    Scroll to top
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Elements bar - Right side (social) -->
+    <ul class="elements-bar right">
+        <li>
+            <div class="social-bar">
+                <ul class="social-bar-holder titles-typo -small-t -unlist vc_hidden-md">
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/176NPPnCwD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Custom cursor elements -->
+    <div class="circle-cursor circle-cursor-outer"></div>
+    <div class="circle-cursor circle-cursor-inner">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.06055 0H20.0605V18H17.0605V5.12155L2.12132 20.0608L0 17.9395L14.9395 3H2.06055V0Z"/>
+        </svg>
+    </div>
 
     <header class="header">
         <div class="container">
@@ -36,12 +83,12 @@
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                     <li class="nav-item has-dropdown">
-                        <a href="#" class="nav-link active">Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="website-development.html" class="active">Website Development</a></li>
-                            <li><a href="seo-google-business-profile-optimization.html">SEO & Google Business Profile Optimization</a></li>
-                            <li><a href="article-and-blog-writing.html">Article and Blog Writing</a></li>
-                            <li><a href="virtual-assistant.html">Virtual Assistant</a></li>
+                            <li><a href="website-development.html#website-development">Website Development</a></li>
+                            <li><a href="seo-google-business-profile-optimization.html#seo-gbp">SEO & Google Business Profile Optimization</a></li>
+                            <li><a href="article-and-blog-writing.html#article-writing">Article and Blog Writing</a></li>
+                            <li><a href="virtual-assistant.html#virtual-assistant">Virtual Assistant</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -56,8 +103,7 @@
     </header>
 
     <main>
-
-        <section class="hero">
+        <section class="hero service-hero">
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Website Development</h1>
@@ -66,65 +112,66 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="service-section" id="website-development">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Overview</h2>
-                </div>
-                <div class="expertise-content" style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-gray); text-align: center;">At VirtuEase, we build websites that don't just look great &mdash; they perform. Whether you need a business site, landing page, or e-commerce platform, we create custom, responsive websites optimized for speed, SEO, and conversions.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">What We Offer</h2>
+                    <h2 class="section-title">Our Website Development Services</h2>
                     <p class="section-subtitle">Everything you need for a powerful online presence</p>
                 </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
-                        <h3 class="card-title">Custom Design</h3>
-                        <p class="card-text">Unique designs tailored to your brand identity</p>
+                <div class="service-features-grid">
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Custom Design</h4>
+                        <p>Unique designs tailored to your brand identity</p>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h3 class="card-title">Mobile Responsive</h3>
-                        <p class="card-text">Perfect experience on every device</p>
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Responsive</h4>
+                        <p>Perfect experience on every device</p>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-search"></i></div>
-                        <h3 class="card-title">SEO Optimized</h3>
-                        <p class="card-text">Built with search engines in mind</p>
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>SEO Optimized</h4>
+                        <p>Built with search engines in mind</p>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-bolt"></i></div>
-                        <h3 class="card-title">Fast Loading</h3>
-                        <p class="card-text">Optimized for speed and performance</p>
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Fast Loading</h4>
+                        <p>Optimized for speed and performance</p>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-cogs"></i></div>
-                        <h3 class="card-title">Easy to Manage</h3>
-                        <p class="card-text">User-friendly content management</p>
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Easy to Manage</h4>
+                        <p>User-friendly content management</p>
                     </div>
-                    <div class="card">
-                        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="card-title">Secure</h3>
-                        <p class="card-text">SSL certificates and security best practices</p>
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Secure</h4>
+                        <p>SSL certificates and security best practices</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta">
+        <section class="service-cta">
             <div class="container">
-                <div class="cta-content">
+                <div class="service-overview">
                     <h2>Ready to build your dream website?</h2>
-                    <p>Contact us today and let's bring your vision to life.</p>
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <p>At VirtuEase, we build websites that don't just look great — they perform. Whether you need a business site, landing page, or e-commerce platform, we create custom, responsive websites optimized for speed, SEO, and conversions. From elegant portfolios to dynamic e-commerce solutions, we'll bring your vision to life with cutting-edge technology and creative design.</p>
                 </div>
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
         </section>
 
