@@ -280,7 +280,8 @@ body.custom-cursor * {
   transition: .3s;
 }
 
-.hamburger-overlay .overlay-menu a:hover {
+.hamburger-overlay .overlay-menu a:hover,
+.hamburger-overlay .overlay-menu a.active {
   color: var(--primary);
 }
 
@@ -407,7 +408,8 @@ body.custom-cursor * {
   transition: color 0.3s;
 }
 
-.nav-menu > li > a:hover {
+.nav-menu > li > a:hover,
+.nav-menu > li > a.active {
   color: var(--primary);
 }
 
@@ -508,6 +510,21 @@ body.custom-cursor * {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-section h1 {
@@ -703,8 +720,24 @@ body.custom-cursor * {
 /* ===== WHY CHOOSE US ===== */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.why-card .card-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+}
+
+.why-card .card-icon svg {
+  fill: currentColor;
+  width: 100%;
+  height: 100%;
 }
 
 .why-card {
@@ -1061,6 +1094,62 @@ body.custom-cursor * {
   font-size: 16px;
   color: var(--text);
   opacity: .6;
+}
+
+/* Page Hero Card (Specifically for Contact page) */
+.page-hero-card {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../images/contact-hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 30px;
+  padding: 100px 80px;
+  margin: 140px auto 40px;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.page-hero-card h1 {
+  font-size: 54px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.page-hero-card p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 24px;
+}
+
+.page-hero-card .btn-email {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.page-hero-card .btn-email:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .page-hero-card {
+    padding: 60px 30px;
+    margin-top: 100px;
+  }
+  .page-hero-card h1 {
+    font-size: 36px;
+  }
 }
 
 /* ===== ABOUT ===== */
