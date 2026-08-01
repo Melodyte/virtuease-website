@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Article &amp; Blog Writing Services</title>
-  <meta name="description" content="VirtuEase offers professional SEO article and blog writing services. Drive traffic, build authority, and engage your audience.">
+  <title>Article &amp; Blog Writing Services | VirtuEase</title>
+  <meta name="description" content="SEO-friendly article and blog writing from VirtuEase. Content that builds authority, boosts traffic, and converts readers into clients.">
   <link rel="icon" type="image/png" href="assets/images/favicon-32.png">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,7 +12,7 @@
 
   <div class="circle-cursor circle-cursor-outer"></div>
   <div class="circle-cursor circle-cursor-inner">
-    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M2.06055 0H20.0605V18H17.0605V5.12155L2.12132 20.0608L0 17.9395L14.9395 3H2.06055V0Z"/>
     </svg>
   </div>
@@ -35,16 +35,13 @@
 
   <header class="site-header">
     <div class="header-container">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="VirtuEase home">
         <img src="assets/images/logo.png" alt="VirtuEase">
       </a>
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="nav-menu">
           <li><a href="/">Home</a></li>
           <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/faq">Faq</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact-us">Contact Us</a></li>
           <li><a href="/about">About Us</a></li>
           <li class="has-dropdown">
             <a href="#">Services</a>
@@ -55,11 +52,13 @@
               <li><a href="/virtual-assistant">Virtual Assistant</a></li>
             </ul>
           </li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <a href="/contact-us" class="btn-header-contact">Contact</a>
-        <button class="hamburger-btn" aria-label="Menu">
+        <a href="/contact-us" class="btn-header-contact">Let's Talk</a>
+        <button class="hamburger-btn" aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
@@ -68,15 +67,12 @@
     </div>
   </header>
 
-  <div class="hamburger-overlay">
+  <div class="hamburger-overlay" aria-hidden="true">
     <ul class="overlay-menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/faq">Faq</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/contact-us">Contact Us</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li class="has-submenu">
+      <li style="--i:0"><a href="/">Home</a></li>
+      <li style="--i:1"><a href="/portfolio">Portfolio</a></li>
+      <li style="--i:2"><a href="/about">About Us</a></li>
+      <li style="--i:3" class="has-submenu">
         <a href="#">Services</a>
         <ul class="overlay-submenu">
           <li><a href="/website-development">Website Development</a></li>
@@ -85,115 +81,144 @@
           <li><a href="/virtual-assistant">Virtual Assistant</a></li>
         </ul>
       </li>
+      <li style="--i:4"><a href="/faq">FAQ</a></li>
+      <li style="--i:5"><a href="/blog">Blog</a></li>
+      <li style="--i:6"><a href="/contact-us">Contact Us</a></li>
     </ul>
   </div>
 
-  <section class="page-hero">
-    <div class="container">
-      <h2>Article &amp;</h2>
-      <h2>Blog Writing</h2>
-      <h2 class="sub-hero-title">Convert Readers into Clients with Professional SEO Content Writing and Strategy</h2>
-    </div>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal revealed">Our Service</span>
+        <h1 class="reveal revealed">Article &amp; Blog Writing</h1>
+        <p class="sub-hero-title">Convert readers into clients with professional SEO content writing and strategy.</p>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="container service-detail">
-      <p>At VirtueasePro, website development is more than lines of code, it’s building a digital headquarters for your business to thrive. Whether you’re starting fresh, revamping your online presence, or launching a complex web application, our team delivers scalable, responsive, and visually stunning solutions tailored to your unique brand. We don’t just build sites; we design custom online experiences that drive business growth, create memorable user journeys, and scale with your goals.</p>
+    <section class="section">
+      <div class="container service-detail">
+        <p class="reveal">At VirtuEase, content is more than words on a page — it's how you build trust, authority, and visibility. Our writers craft SEO-friendly articles, blog posts, and web copy that answer your customers' questions, position you as the expert, and turn readers into clients. Every piece is researched, structured, and optimized to rank.</p>
 
-      <h4 style="font-size:18px;font-weight:700;margin-top:40px;margin-bottom:20px">Creative &amp; Strategic Editorial Process</h4>
+        <h2 class="reveal">Creative &amp; Strategic Editorial Process</h2>
 
-      <p style="margin-bottom:8px"><strong>1. Strategy and Ideation</strong></p>
-      <ul style="margin-bottom:20px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:6px">Content briefings based on your business goals, audience needs, and current trends.</li>
-        <li style="margin-bottom:6px">Keyword, topic, and competitor gap analysis for targeted engagement.</li>
-      </ul>
+        <h3>1. Strategy &amp; Ideation</h3>
+        <ul>
+          <li>Content briefings based on your business goals, audience needs, and current trends.</li>
+          <li>Keyword, topic, and competitor gap analysis for targeted engagement.</li>
+        </ul>
 
-      <p style="margin-bottom:8px"><strong>2. Research and Outline</strong></p>
-      <ul style="margin-bottom:20px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:6px">Fact-checked, data-driven research.</li>
-        <li style="margin-bottom:6px">Structured outlines for clarity and SEO success.</li>
-      </ul>
+        <h3>2. Research &amp; Outline</h3>
+        <ul>
+          <li>Fact-checked, data-driven research.</li>
+          <li>Structured outlines for clarity and SEO success.</li>
+        </ul>
 
-      <p style="margin-bottom:8px"><strong>3. Writing and Editing</strong></p>
-      <ul style="margin-bottom:20px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:6px">Tone, style, and formatting aligned to your brand.</li>
-        <li style="margin-bottom:6px">Plagiarism-free, original work.</li>
-        <li style="margin-bottom:6px">Professional editing, proofing, and content optimization.</li>
-      </ul>
+        <h3>3. Writing &amp; Editing</h3>
+        <ul>
+          <li>Tone, style, and formatting aligned to your brand.</li>
+          <li>Plagiarism-free, original work.</li>
+          <li>Professional editing, proofing, and content optimization.</li>
+        </ul>
 
-      <p style="margin-bottom:8px"><strong>4. SEO and Publishing</strong></p>
-      <ul style="margin-bottom:20px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:6px">Meta tags, internal/external links, keyword density management.</li>
-        <li style="margin-bottom:6px">Images, infographics, and formatting for best results.</li>
-      </ul>
+        <h3>4. SEO &amp; Publishing</h3>
+        <ul>
+          <li>Meta tags, internal/external links, keyword density management.</li>
+          <li>Images, infographics, and formatting for best results.</li>
+        </ul>
 
-      <p style="margin-bottom:8px"><strong>5. Performance Tracking</strong></p>
-      <ul style="margin-bottom:20px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:6px">Analytics reports and strategy tweaks for best ROI.</li>
-      </ul>
+        <h3>5. Performance Tracking</h3>
+        <ul>
+          <li>Analytics reports and strategy tweaks for best ROI.</li>
+        </ul>
 
-      <h4 style="font-size:18px;font-weight:700;margin-top:30px;margin-bottom:15px">Features and Advantages</h4>
-      <ul style="margin-bottom:30px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:8px">Custom content calendars: Plan your editorial roadmap.</li>
-        <li style="margin-bottom:8px">Pillar posts, guides, and niche topics: Build deep authority.</li>
-        <li style="margin-bottom:8px">Multi-format writing: Blogs, articles, guides, whitepapers, and news.</li>
-        <li style="margin-bottom:8px">Readability, conversion, and storytelling: No fluff, value-packed content.</li>
-      </ul>
+        <h2 class="reveal">Features and Advantages</h2>
+        <ul>
+          <li>Custom content calendars: plan your editorial roadmap.</li>
+          <li>Pillar posts, guides, and niche topics: build deep authority.</li>
+          <li>Multi-format writing: blogs, articles, guides, whitepapers, and news.</li>
+          <li>Readability, conversion, and storytelling: no fluff, value-packed content.</li>
+        </ul>
 
-      <h4 style="font-size:18px;font-weight:700;margin-top:30px;margin-bottom:15px">Client Benefits</h4>
-      <ul style="margin-bottom:30px;padding-left:20px;line-height:1.6">
-        <li style="margin-bottom:8px">Boosts SEO and increases website visitors.</li>
-        <li style="margin-bottom:8px">Builds brand credibility and industry leadership.</li>
-        <li style="margin-bottom:8px">Drives conversions through targeted calls to action.</li>
-      </ul>
+        <h2 class="reveal">Client Benefits</h2>
+        <ul>
+          <li>Boosts SEO and increases website visitors.</li>
+          <li>Builds brand credibility and industry leadership.</li>
+          <li>Drives conversions through targeted calls to action.</li>
+        </ul>
 
-      <a href="/contact-us" class="btn btn-primary" style="margin-top:20px">Get Started Today</a>
-    </div>
-  </section>
+        <a href="/contact-us" class="btn btn-primary reveal">Get Started Today
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.025 3l8.97 8.97-8.97 8.98-1.415-1.415 6.56-6.556H2v-2.016h16.17l-6.56-6.556z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <h3>VirtuEase</h3>
-          <p>Your Creative Growth Partner.</p>
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="VirtuEase">
+          <p>Your Creative Growth Partner. We help local businesses get found, trusted, and chosen online.</p>
           <div class="social-links">
-            <a href="#" target="_blank" rel="noopener">Fb. /</a>
-            <a href="#" target="_blank" rel="noopener">Ig. /</a>
-            <a href="#" target="_blank" rel="noopener">Tw. /</a>
-            <a href="#" target="_blank" rel="noopener">Be.</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.76.71 1.4 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
           </div>
         </div>
         <div>
           <h4>Quick Links</h4>
-          <ul class="quick-links">
+          <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/faq">Faq</a></li>
-            <li><a href="/contact-us">Contact</a></li>
+            <li><a href="/about">About Us</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/faq">FAQ</a></li>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
           </ul>
         </div>
         <div>
-          <h4>Work inquiries</h4>
-          <p>Interested in working with us?</p>
-          <a href="mailto:admin@virtueasepro.com">admin@virtueasepro.com</a>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/website-development">Website Development</a></li>
+            <li><a href="/seo-google-business-profile-optimization">SEO &amp; GBP Optimization</a></li>
+            <li><a href="/article-and-blog-writing">Article &amp; Blog Writing</a></li>
+            <li><a href="/virtual-assistant">Virtual Assistant</a></li>
+          </ul>
         </div>
-        <div>
-          <h4>Sign up for the newsletter</h4>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Your email address" required>
+        <div class="footer-newsletter">
+          <h4>Work Inquiries</h4>
+          <p>Interested in working with us? <a href="mailto:admin@virtueasepro.com" style="color:var(--primary-light);font-weight:600">admin@virtueasepro.com</a></p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
             <button type="submit">Subscribe</button>
           </form>
-          <p style="margin-top:12px;font-size:12px;opacity:.5">I'm okay with getting emails and having that activity tracked to improve my experience.</p>
+          <p class="newsletter-note">I'm okay with getting emails and having that activity tracked to improve my experience.</p>
         </div>
       </div>
-      <div class="footer-bottom">&copy; 2025 VirtuEase. All rights reserved.</div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 VirtuEase. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="/faq">FAQ</a>
+          <a href="/contact-us">Support</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>

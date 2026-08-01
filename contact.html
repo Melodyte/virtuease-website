@@ -12,7 +12,7 @@
 
   <div class="circle-cursor circle-cursor-outer"></div>
   <div class="circle-cursor circle-cursor-inner">
-    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M2.06055 0H20.0605V18H17.0605V5.12155L2.12132 20.0608L0 17.9395L14.9395 3H2.06055V0Z"/>
     </svg>
   </div>
@@ -35,16 +35,13 @@
 
   <header class="site-header">
     <div class="header-container">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="VirtuEase home">
         <img src="assets/images/logo.png" alt="VirtuEase">
       </a>
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="nav-menu">
           <li><a href="/">Home</a></li>
           <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/faq">Faq</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact-us">Contact Us</a></li>
           <li><a href="/about">About Us</a></li>
           <li class="has-dropdown">
             <a href="#">Services</a>
@@ -55,11 +52,13 @@
               <li><a href="/virtual-assistant">Virtual Assistant</a></li>
             </ul>
           </li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <a href="/contact-us" class="btn-header-contact">Contact</a>
-        <button class="hamburger-btn" aria-label="Menu">
+        <a href="/contact-us" class="btn-header-contact">Let's Talk</a>
+        <button class="hamburger-btn" aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
@@ -68,15 +67,12 @@
     </div>
   </header>
 
-  <div class="hamburger-overlay">
+  <div class="hamburger-overlay" aria-hidden="true">
     <ul class="overlay-menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/faq">Faq</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/contact-us">Contact Us</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li class="has-submenu">
+      <li style="--i:0"><a href="/">Home</a></li>
+      <li style="--i:1"><a href="/portfolio">Portfolio</a></li>
+      <li style="--i:2"><a href="/about">About Us</a></li>
+      <li style="--i:3" class="has-submenu">
         <a href="#">Services</a>
         <ul class="overlay-submenu">
           <li><a href="/website-development">Website Development</a></li>
@@ -85,132 +81,187 @@
           <li><a href="/virtual-assistant">Virtual Assistant</a></li>
         </ul>
       </li>
+      <li style="--i:4"><a href="/faq">FAQ</a></li>
+      <li style="--i:5"><a href="/blog">Blog</a></li>
+      <li style="--i:6"><a href="/contact-us">Contact Us</a></li>
     </ul>
   </div>
 
-  <section class="page-hero-card">
-    <h1>Contact Us</h1>
-    <p>Leave us a little info, and we'll be in touch</p>
-    <a href="mailto:admin@virtueasepro.com" class="btn-email">Send us an email</a>
-  </section>
+  <main>
+    <section class="page-hero-card reveal revealed">
+      <h1>Contact Us</h1>
+      <p>Leave us a little info, and we'll be in touch. Your first consultation and audit are completely free.</p>
+      <a href="mailto:admin@virtueasepro.com" class="btn-email">Send us an email
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="contact-split">
-        <div class="contact-info">
-          <h2>Get in Touch</h2>
-          
-          <div class="info-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
-            <div class="info-icon" style="color: var(--primary-light); width: 24px; height: 24px;">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; width: 100%; height: 100%;">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
+    <section class="section">
+      <div class="container">
+        <div class="contact-split">
+          <div class="contact-info reveal">
+            <span class="eyebrow">Get In Touch</span>
+            <h2>Let's Build Something Great Together</h2>
+            <p>Tell us about your project and goals — we'll get back to you within one business day with next steps.</p>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="info-label">Email Us</span>
+                <a href="mailto:admin@virtueasepro.com">admin@virtueasepro.com</a>
+              </div>
             </div>
-            <div>
-              <a href="mailto:admin@virtueasepro.com" style="color: var(--text); text-decoration: none; font-size: 16px;">admin@virtueasepro.com</a>
+
+            <div class="info-item" style="margin-bottom:40px">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="info-label">Call Us</span>
+                <a href="tel:+2349064621664">+234 906 462 1664</a>
+              </div>
             </div>
+
+            <span class="eyebrow">Follow Along</span>
+            <h2 style="font-size:24px;margin-bottom:20px">Social Media</h2>
+            <div class="social-list">
+              <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.76.71 1.4 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              </a>
+            </div>
+
+            <hr style="border:0;border-top:1px solid rgba(255,255,255,.12);margin:36px 0 24px;width:64px">
+            <p style="font-size:15px;opacity:.75;line-height:1.75;max-width:340px">Got ideas but not sure where to start? We'd love to hear about your business and show you how we can make digital growth effortless.</p>
           </div>
 
-          <div class="info-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 40px;">
-            <div class="info-icon" style="color: var(--primary-light); width: 24px; height: 24px;">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; width: 100%; height: 100%;">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-              </svg>
+          <form class="contact-form reveal" style="--d:120ms" novalidate>
+            <div class="form-row">
+              <div>
+                <label for="name">Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Your working email" required>
+              </div>
             </div>
-            <div>
-              <span style="color: var(--text); font-size: 16px;">+2349064621664</span>
+
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Your company name">
+
+            <div class="form-row">
+              <div>
+                <label for="subject">Subject <span class="req">*</span></label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+              </div>
             </div>
-          </div>
 
-          <h2 style="margin-top: 40px; margin-bottom: 20px;">Social Media</h2>
-          <div class="social-list" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
-            <a href="#" target="_blank" rel="noopener" style="color: var(--text); opacity: 0.8; text-decoration: none; font-size: 15px; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Facebook</a>
-            <a href="#" target="_blank" rel="noopener" style="color: var(--text); opacity: 0.8; text-decoration: none; font-size: 15px; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Instagram</a>
-            <a href="#" target="_blank" rel="noopener" style="color: var(--text); opacity: 0.8; text-decoration: none; font-size: 15px; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Twitter</a>
-          </div>
+            <label for="budget">Choose a Budget (USD) <span class="req">*</span></label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000 – $3,000">$1,000 – $3,000</option>
+              <option value="$3,000 – $5,000">$3,000 – $5,000</option>
+              <option value="$5,000 – $10,000">$5,000 – $10,000</option>
+              <option value="Over $10,000">Over $10,000</option>
+            </select>
 
-          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.15); margin: 30px 0 20px 0; width: 60px;">
-          <p style="font-size: 15px; opacity: .7; line-height: 1.6; max-width: 320px;">Got ideas but not sure where to start? We’d love to hear about your business and show you how we can make digital growth effortless.</p>
+            <label for="message">Project Details <span class="req">*</span></label>
+            <textarea id="message" name="message" placeholder="Brief project details" required></textarea>
+
+            <button type="submit">Submit Inquiry
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+            <div class="form-success" role="status">Thanks for reaching out! Your email app should open with your message ready to send. If it doesn't, email us directly at admin@virtueasepro.com.</div>
+          </form>
         </div>
-
-        <form class="contact-form">
-          <label for="name">Name <span style="color:red">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-          <label for="email">Email <span style="color:red">*</span></label>
-          <input type="email" id="email" name="email" placeholder="Your working email" required>
-
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Your company name">
-
-          <label for="subject">Subject <span style="color:red">*</span></label>
-          <input type="text" id="subject" name="subject" placeholder="Choose your subject" required>
-
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-
-          <label for="budget">Choose a Budget (USD) <span style="color:red">*</span></label>
-          <select id="budget" name="budget" required style="width:100%; padding:14px 20px; border-radius:30px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#fff; font-size:14px; outline:none; margin-bottom:20px; box-sizing:border-box;">
-            <option value="Less than 1k" style="background:#111;color:#fff">Less than 1k</option>
-            <option value="1k to 3k" style="background:#111;color:#fff">1k to 3k</option>
-            <option value="Less than 5k" style="background:#111;color:#fff">Less than 5k</option>
-            <option value="Over 10k" style="background:#111;color:#fff">Over 10k</option>
-          </select>
-
-          <label for="message">Project Details <span style="color:red">*</span></label>
-          <textarea id="message" name="message" placeholder="Brief Project Details" required></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <h3>VirtuEase</h3>
-          <p>Your Creative Growth Partner.</p>
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="VirtuEase">
+          <p>Your Creative Growth Partner. We help local businesses get found, trusted, and chosen online.</p>
           <div class="social-links">
-            <a href="#" target="_blank" rel="noopener">Fb. /</a>
-            <a href="#" target="_blank" rel="noopener">Ig. /</a>
-            <a href="#" target="_blank" rel="noopener">Tw. /</a>
-            <a href="#" target="_blank" rel="noopener">Be.</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.76.71 1.4 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
           </div>
         </div>
         <div>
           <h4>Quick Links</h4>
-          <ul class="quick-links">
+          <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/faq">Faq</a></li>
-            <li><a href="/contact-us">Contact</a></li>
+            <li><a href="/about">About Us</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/faq">FAQ</a></li>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
           </ul>
         </div>
         <div>
-          <h4>Work inquiries</h4>
-          <p>Interested in working with us?</p>
-          <a href="mailto:admin@virtueasepro.com">admin@virtueasepro.com</a>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/website-development">Website Development</a></li>
+            <li><a href="/seo-google-business-profile-optimization">SEO &amp; GBP Optimization</a></li>
+            <li><a href="/article-and-blog-writing">Article &amp; Blog Writing</a></li>
+            <li><a href="/virtual-assistant">Virtual Assistant</a></li>
+          </ul>
         </div>
-        <div>
-          <h4>Sign up for the newsletter</h4>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Your email address" required>
+        <div class="footer-newsletter">
+          <h4>Work Inquiries</h4>
+          <p>Interested in working with us? <a href="mailto:admin@virtueasepro.com" style="color:var(--primary-light);font-weight:600">admin@virtueasepro.com</a></p>
+          <form class="newsletter-form" novalidate>
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
             <button type="submit">Subscribe</button>
           </form>
-          <p style="margin-top:12px;font-size:12px;opacity:.5">I'm okay with getting emails and having that activity tracked to improve my experience.</p>
+          <p class="newsletter-note">I'm okay with getting emails and having that activity tracked to improve my experience.</p>
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2025 VirtuEase. All rights reserved.
+        <span>&copy; 2026 VirtuEase. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="/faq">FAQ</a>
+          <a href="/contact-us">Support</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>
