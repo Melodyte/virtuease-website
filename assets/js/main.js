@@ -22,7 +22,7 @@
       toastEl._timer = setTimeout(() => toastEl.classList.remove('visible'), 4200);
     }
 
-    /* ===== ANIMATED TEXT (typewriter) ===== */
+    /* ===== ANIMATED TEXT (smooth typewriter) ===== */
     const fancyText = document.getElementById('fancy-text');
     if (fancyText) {
       const words = JSON.parse(fancyText.getAttribute('data-words') || '["Found","Chosen"]');
@@ -32,26 +32,25 @@
 
       const tick = () => {
         const currentWord = words[wordIndex];
+        charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
+        fancyText.textContent = currentWord.substring(0, charIndex);
 
+        let delay;
         if (isDeleting) {
-          charIndex--;
-          fancyText.textContent = currentWord.substring(0, charIndex);
-          if (charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            setTimeout(tick, 420);
-            return;
-          }
-          setTimeout(tick, 45);
+          delay = 38;
         } else {
-          charIndex++;
-          fancyText.textContent = currentWord.substring(0, charIndex);
-          if (charIndex === currentWord.length) {
-            setTimeout(() => { isDeleting = true; tick(); }, 1900);
-            return;
-          }
-          setTimeout(tick, 90);
+          delay = 58 + Math.min(charIndex * 7, 70);
         }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+          isDeleting = true;
+          delay = 2300;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          delay = 340;
+        }
+        setTimeout(tick, delay);
       };
       tick();
     }
@@ -140,9 +139,11 @@
 
     if (hamburgerBtn && overlay) {
       hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.classList.toggle('no-scroll', overlay.classList.contains('active'));
+        const opening = !overlay.classList.contains('active');
+        hamburgerBtn.classList.toggle('active', opening);
+        overlay.classList.toggle('active', opening);
+        document.body.classList.toggle('no-scroll', opening);
+        document.body.classList.toggle('menu-open', opening);
       });
 
       overlay.querySelectorAll('.overlay-menu > li > a:not([href="#"])').forEach(link => {
@@ -153,6 +154,7 @@
         hamburgerBtn.classList.remove('active');
         overlay.classList.remove('active');
         document.body.classList.remove('no-scroll');
+        document.body.classList.remove('menu-open');
         overlay.querySelectorAll('.overlay-submenu.open').forEach(s => s.classList.remove('open'));
         overlay.querySelectorAll('.has-submenu.open').forEach(s => s.classList.remove('open'));
       }
@@ -160,6 +162,17 @@
       document.addEventListener('keydown', e => {
         if (e.key === 'Escape') closeMenu();
       });
+
+      if (!overlay.querySelector('.overlay-head')) {
+        const head = document.createElement('div');
+        head.className = 'overlay-head';
+        head.innerHTML = '<span class="overlay-title">Menu</span>' +
+          '<button class="overlay-close" aria-label="Close menu">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">' +
+          '<path d="M18 6L6 18M6 6l12 12"/></svg></button>';
+        overlay.prepend(head);
+        head.querySelector('.overlay-close').addEventListener('click', closeMenu);
+      }
 
       document.querySelectorAll('.hamburger-overlay .has-submenu > a').forEach(link => {
         link.addEventListener('click', e => {
@@ -315,7 +328,7 @@
         draw() {
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(226, 193, 255, 0.35)';
+          ctx.fillStyle = 'rgba(217, 184, 245, 0.3)';
           ctx.fill();
         }
       }
@@ -353,7 +366,7 @@
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(164, 90, 255, ${0.14 * (1 - dist / 110)})`;
+              ctx.strokeStyle = `rgba(154, 77, 255, ${0.10 * (1 - dist / 110)})`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -367,7 +380,7 @@
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(mouse.x, mouse.y);
-              ctx.strokeStyle = `rgba(226, 193, 255, ${0.18 * (1 - dist / 140)})`;
+              ctx.strokeStyle = `rgba(217, 184, 245, ${0.14 * (1 - dist / 140)})`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -462,6 +475,46 @@
 
       if (active) link.classList.add('active');
     });
+
+    /* ===== TESTIMONIAL CAROUSEL ===== */
+    const carousel = document.getElementById('testimonials-carousel');
+    if (carousel) {
+      const track = carousel.querySelector('.testimonials-track');
+      const slides = [...carousel.querySelectorAll('.testimonial-slide')];
+      const dots = [...carousel.querySelectorAll('.t-dot')];
+      const prev = carousel.querySelector('.t-prev');
+      const next = carousel.querySelector('.t-next');
+      let index = 0;
+      let timer;
+
+      const go = i => {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, di) => d.classList.toggle('active', di === index));
+      };
+
+      const auto = () => {
+        clearInterval(timer);
+        if (!prefersReducedMotion) timer = setInterval(() => go(index + 1), 6000);
+      };
+
+      if (prev) prev.addEventListener('click', () => { go(index - 1); auto(); });
+      if (next) next.addEventListener('click', () => { go(index + 1); auto(); });
+      dots.forEach((d, di) => d.addEventListener('click', () => { go(di); auto(); }));
+
+      carousel.addEventListener('mouseenter', () => clearInterval(timer));
+      carousel.addEventListener('mouseleave', auto);
+
+      let touchStart = 0;
+      track.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStart;
+        if (Math.abs(dx) > 40) { go(index + (dx < 0 ? 1 : -1)); auto(); }
+      }, { passive: true });
+
+      go(0);
+      auto();
+    }
 
   });
 })();
