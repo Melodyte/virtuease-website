@@ -1631,6 +1631,14 @@ button, input, select, textarea {
 }
 
 /* Page Hero Card (Contact page) */
+.contact-page-hero {
+  padding-bottom: 64px;
+}
+
+.contact-page-hero .page-hero-card {
+  margin: 28px auto 20px;
+}
+
 .page-hero-card {
   background:
     linear-gradient(100deg, rgba(6,1,9,.92) 30%, rgba(6,1,9,.45) 100%),
@@ -2003,6 +2011,7 @@ button, input, select, textarea {
   align-items: center;
   gap: 20px;
   cursor: pointer;
+  padding: 6px 0;
   font-size: 16.5px;
   font-weight: 600;
   color: var(--text);
@@ -2269,6 +2278,11 @@ button, input, select, textarea {
   color: var(--text);
   font-size: 16px;
   font-weight: 500;
+}
+
+.contact-info .info-item a {
+  display: inline-block;
+  padding: 8px 4px;
 }
 
 .contact-info .info-item a:hover {
@@ -2653,6 +2667,7 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 4px;
   transition: color .3s, gap .3s var(--ease);
 }
 
@@ -2682,9 +2697,19 @@ button, input, select, textarea {
   margin-bottom: 18px;
 }
 
+.footer .footer-newsletter p a {
+  display: inline-block;
+  padding: 6px 2px;
+}
+
+.footer .footer-newsletter {
+  min-width: 0;
+}
+
 .footer .newsletter-form {
   display: flex;
   gap: 8px;
+  width: 100%;
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 999px;
@@ -2784,7 +2809,11 @@ button, input, select, textarea {
 
 .footer-bottom .footer-legal {
   display: flex;
-  gap: 24px;
+  gap: 12px;
+}
+
+.footer-bottom .footer-legal a {
+  padding: 10px 8px;
 }
 
 .footer-bottom .footer-legal a:hover {
@@ -2902,6 +2931,7 @@ button, input, select, textarea {
   .about-grid-4 { grid-template-columns: 1fr 1fr; }
   .about-grid-4 .spacer-col { display: none; }
   .page-hero-card { padding: 64px 48px; }
+  .contact-page-hero .page-hero-card { width: 100%; }
   .counters-grid { gap: 16px; }
   .section { padding: 76px 0; }
 }
@@ -2940,27 +2970,55 @@ button, input, select, textarea {
   .footer-bottom .footer-legal { justify-content: center; }
 
   .page-hero { padding: 140px 20px 64px; }
+  .page-hero h1 { font-size: clamp(26px, 7.2vw, 40px); }
   .page-hero-card { padding: 52px 28px; margin-top: 120px; width: calc(100% - 32px); border-radius: 22px; }
   .page-hero-card h1 { font-size: 34px; }
+  .contact-page-hero { padding: 120px 20px 48px; }
+  .contact-page-hero .page-hero-card { margin-top: 0; width: 100%; padding: 44px 24px; }
+
+  .hero-title,
+  .hero-gradient-text {
+    font-size: clamp(34px, 11vw, 52px);
+    letter-spacing: -1.5px;
+  }
 
   .about-grid-4 { grid-template-columns: 1fr; gap: 28px; }
   .contact-split { padding-top: 48px; }
   .contact-form { padding: 30px 22px; }
   .contact-form .form-row { grid-template-columns: 1fr; gap: 0; }
   .faq-item { padding: 20px; }
-  .faq-question { font-size: 15px; }
+  .faq-question { font-size: 15px; padding: 10px 0; }
   .service-detail { padding-top: 48px; }
   .scroll-top { bottom: 20px; right: 20px; width: 44px; height: 44px; }
 
-  .hero-gradient-text, .hero-title { letter-spacing: -1px; }
+  .toast {
+    bottom: 20px;
+    padding: 14px 20px;
+    font-size: 13px;
+    max-width: 94vw;
+  }
+
+  .expertise-float { position: static; margin-top: 0; margin-left: 0; max-width: 100%; }
 }
 
 @media (max-width: 480px) {
   .hero-stats { grid-template-columns: 1fr; gap: 20px; border-top: none; padding-top: 0; margin-top: 44px; }
-  .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .hero-stat .num { font-size: 24px; }
   .hero-stat .label { font-size: 10px; }
   .btn-header-contact { display: none; }
   .portfolio-cta-card { padding: 32px 22px; }
   .testimonials-grid { gap: 14px; }
+
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; }
+
+  .cta-section h2 { font-size: 28px; }
+  .cta-section p { font-size: 15.5px; }
+
+  .section-title h2 { font-size: 27px; }
+  .section-title p { font-size: 15px; }
+
+  .footer .newsletter-form { flex-wrap: wrap; border-radius: 18px; }
+  .footer .newsletter-form input { flex: 1 1 100%; }
+  .footer .newsletter-form button { width: 100%; }
 }
